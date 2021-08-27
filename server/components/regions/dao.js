@@ -10,7 +10,7 @@ module.exports = {
                 });
             }, []).sort();
 
-            if (!formattedRegion.length) reject(Error('No data'));
+            if (!formattedRegion.length) reject(Error(404));
 
             setTimeout(() => {
                 return resolve(formattedRegion);

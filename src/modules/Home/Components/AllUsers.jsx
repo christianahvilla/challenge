@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import { Grid } from '@material-ui/core';
-import React, { useCallback, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Title from './Title';
 import pagesStyles from './Styles';
