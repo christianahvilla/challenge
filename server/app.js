@@ -1,27 +1,20 @@
-'use strict';
-const express = require('express');
-const app = express();
-const registerRoutes = require('./routes');
+/* eslint-disable no-console */
+const app = require('./services/utils/server');
 
 // server config
 const port = process.env.PORT || 3000;
 
-// register routes
-registerRoutes(app);
-
 // create server start method
 const start = () => {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         // start the server
         app.listen(port, () => {
             console.log(`Connected to Port ${port}`);
-            resolve()
+            resolve();
         });
     }).catch((error) => {
-        console.log(`failed to start server => ${error.message}`)
+        console.log(`failed to start server => ${error.message}`);
     });
-}
+};
 
 module.exports = start;
-
-

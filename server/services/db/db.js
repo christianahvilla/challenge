@@ -1,4 +1,3 @@
-'use strict';
 /*
 This file (db.js) represents an in-memory db in the form of a javascript object.
 */
@@ -7,42 +6,42 @@ module.exports = {
     usersById: {
         1: {
             username: 'John',
-            age: 18
+            age: 18,
         },
         2: {
             username: 'Paul',
-            age: 29
+            age: 29,
         },
         3: {
             username: 'Rita',
-            age: 12
+            age: 12,
         },
         4: {
             username: 'Erica',
-            age: 90
+            age: 90,
         },
         5: {
             username: 'Tina',
-            age: 90
+            age: 90,
         },
     },
 
     // DO NOT MODIFY itemsOfUserByUsername
     itemsOfUserByUsername: {
         John: [
-            'carrot', 'apple', 'grapes', 'cake'
+            'carrot', 'apple', 'grapes', 'cake',
         ],
         Paul: [
-            'crackers', 'chips', 'cake', 'tv'
+            'crackers', 'chips', 'cake', 'tv',
         ],
         Rita: [
-            'ham', 'beef', 'cake', 'chips'
+            'ham', 'beef', 'cake', 'chips',
         ],
         Erica: [
-            'tv'
+            'tv',
         ],
         Tina: [
-            'tv'
-        ]
-    }
-}
+            'tv',
+        ],
+    },
+};
