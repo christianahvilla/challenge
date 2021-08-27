@@ -1,17 +1,27 @@
 const userModel = require('./model');
 const userDto = require('./dto');
+const { errorHandler } = require('../../middleware');
+const errors = require('../../services/utils/errors');
 
 module.exports = {
-    async getUsers(_, res) {
-        const users = await userModel.getUsers();
+    async getUsers(req, res) {
+        try {
+            const users = await userModel.getUsers();
 
-        return res.send(userDto.multipleUser(users));
+            return res.send(userDto.multipleUser(users));
+        } catch ({ message }) {
+            return errorHandler(errors[message], req, res);
+        }
     },
 
     async getUsersByRegion(req, res) {
-        const { query: { region } } = req;
-        const users = await userModel.getUsersByRegion(region);
+        try {
+            const { query: { region } } = req;
+            const users = await userModel.getUsersByRegion(region);
 
-        return res.send(userDto.multipleUserRegion(users));
+            return res.send(userDto.multipleUserRegion(users));
+        } catch ({ message }) {
+            return errorHandler(errors[message], req, res);
+        }
     },
 };

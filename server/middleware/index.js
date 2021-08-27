@@ -1,10 +1,9 @@
 const createError = require('http-errors');
 
-module.exports.error404Handler = (req, res, next) => {
+module.exports.error404Handler = (_req, _res, next) => {
     next(createError(404));
 };
 
-// eslint-disable-next-line
 module.exports.errorHandler = (err, req, res, _next) => {
     // set locals, only providing error in development
     res.locals.message = err.message;

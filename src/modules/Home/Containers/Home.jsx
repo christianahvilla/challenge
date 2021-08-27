@@ -12,7 +12,7 @@ const Home = () => {
         error,
     } = home;
 
-    const [_, setState] = useContext(AppContext);
+    const [_state, setState] = useContext(AppContext);
 
     useEffect(() => {
         setState((currentState) => ({ ...currentState, openDialog: loading }));

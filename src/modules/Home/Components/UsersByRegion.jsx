@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import { Grid } from '@material-ui/core';
-import React, { useState, useCallback, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import CommonSelect from '../../../components/Select/Select';
 import Title from './Title';
